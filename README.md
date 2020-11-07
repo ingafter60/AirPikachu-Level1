@@ -21,6 +21,15 @@ Installing Ruby, Rails for Windows
 
         new file:   README.md
 
+### 1.2.2 Install Bootstrap4
+
+        modified:   Gemfile
+        modified:   Gemfile.lock
+        modified:   README.md
+        deleted:    app/assets/stylesheets/application.css
+        new file:   app/assets/stylesheets/application.scss
+        modified:   app/javascript/packs/application.js
+
 Task 2: Basic project
 
 What we're going to build in this task1:15  

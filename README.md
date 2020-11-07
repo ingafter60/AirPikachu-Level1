@@ -35,10 +35,83 @@ Installing Ruby, Rails for Windows
 ### 1.3.3 Create a new github repository
 
     > https://github.com/ingafter60/AirPikachu-Level1
-        modified:   README.mdTask 2: Basic project
+        modified:   README.mdTask
 
-What we're going to build in this task1:15  
-Create basic authentication5:45  
+## Taks 2: Basic project
+
+### 06. What we're going to build in this task
+
+    # Introduction of Taks 2
+    > User registration
+    > User login/logout
+    > User update
+    > User profile
+    > Responsive navbar
+    > Display logged in user
+
+### 07. Create basic authentication
+
+	> gem 'devise', '~> 4.6', '>= 4.6.2'
+	> rails generate devise:install (bundle update is needed)
+	> rails generate devise User
+	> rails db:migrate
+	mysql> DESC users;
+	+------------------------+--------------+------+-----+---------+----------------+
+	| Field                  | Type         | Null | Key | Default | Extra          |
+	+------------------------+--------------+------+-----+---------+----------------+
+	| id                     | bigint(20)   | NO   | PRI | NULL    | auto_increment |
+	| email                  | varchar(255) | NO   | UNI |         |                |
+	| encrypted_password     | varchar(255) | NO   |     |         |                |
+	| reset_password_token   | varchar(255) | YES  | UNI | NULL    |                |
+	| reset_password_sent_at | datetime     | YES  |     | NULL    |                |
+	| remember_created_at    | datetime     | YES  |     | NULL    |                |
+	| created_at             | datetime(6)  | NO   |     | NULL    |                |
+	| updated_at             | datetime(6)  | NO   |     | NULL    |                |
+	+------------------------+--------------+------+-----+---------+----------------+
+	8 rows in set (0.00 sec)
+	> rails g devise:views
+	> rails s
+	> http://localhost:3000/users/sign_up
+	> sign up
+	> rails s
+	> :)
+        modified:   Gemfile
+        modified:   Gemfile.lock
+        modified:   README.md
+        new file:   app/models/user.rb
+        new file:   app/views/devise/confirmations/new.html.erb
+        new file:   app/views/devise/mailer/confirmation_instructions.html.erb
+        new file:   app/views/devise/mailer/email_changed.html.erb
+        new file:   app/views/devise/mailer/password_change.html.erb
+        new file:   app/views/devise/mailer/reset_password_instructions.html.erb
+        new file:   app/views/devise/mailer/unlock_instructions.html.erb
+        new file:   app/views/devise/passwords/edit.html.erb
+        new file:   app/views/devise/passwords/new.html.erb
+        new file:   app/views/devise/registrations/edit.html.erb
+        new file:   app/views/devise/registrations/new.html.erb
+        new file:   app/views/devise/sessions/new.html.erb
+        new file:   app/views/devise/shared/_error_messages.html.erb
+        new file:   app/views/devise/shared/_links.html.erb
+        new file:   app/views/devise/unlocks/new.html.erb
+        modified:   app/views/layouts/application.html.erb
+        modified:   config/environments/development.rb
+        new file:   config/initializers/devise.rb
+        new file:   config/locales/devise.en.yml
+        modified:   config/routes.rb
+        new file:   db/migrate/20201107040120_devise_create_users.rb
+        new file:   db/schema.rb
+        new file:   latest_specs.4.8
+        new file:   latest_specs.4.8.gz
+        new file:   prerelease_specs.4.8
+        new file:   prerelease_specs.4.8.gz
+        new file:   specs.4.8
+        new file:   specs.4.8.gz
+        new file:   test/fixtures/users.yml
+        new file:   test/models/user_test.rb
+
+
+
+	
 Building navbar with partial view11:00  
 Authentication with full name5:37  
 Update authentication views17:04

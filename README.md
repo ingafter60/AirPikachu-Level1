@@ -1,5 +1,7 @@
 # BUILDING LINKE AIRBNB APP 'AIRPIKACHU' LEVEL 1 USING Rails version: 6.0.3.4 & Ruby version: ruby 2.6.6p146
 
+https://github.com/ingafter60/AirPikachu-Level1
+
 ## Task 1: Let's party
 
 Install SQLiteBrowser1:21  
@@ -30,7 +32,10 @@ Installing Ruby, Rails for Windows
         new file:   app/assets/stylesheets/application.scss
         modified:   app/javascript/packs/application.js
 
-Task 2: Basic project
+### 1.3.3 Create a new github repository
+
+    > https://github.com/ingafter60/AirPikachu-Level1
+        modified:   README.mdTask 2: Basic project
 
 What we're going to build in this task1:15  
 Create basic authentication5:45  
